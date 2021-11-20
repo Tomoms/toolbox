@@ -25,7 +25,7 @@ if __name__ == '__main__':
     minutes = 0
     seconds = 0
 
-    for song in os.listdir(folder):
+    for song in sorted(os.listdir(folder)):
         if song != 'tracklist.txt':
             audio = TinyTag.get(folder + "/" + song)
             title = audio.title
